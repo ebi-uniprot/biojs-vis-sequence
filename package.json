@@ -1,11 +1,11 @@
 {
   "name": "biojs-vis-sequence",
   "description": "Display sequence",
-  "version": "0.0.1",
-  "homepage": "http://github.com/biojs/biojs",
+  "version": "0.0.2",
+  "homepage": "http://github.com/biojs/biojs-vis-sequence",
   "repository": {
     "type": "git",
-    "url": "git://github.com/biojs/biojs2"
+    "url": "git://github.com/biojs/biojs-vis-sequence"
   },
   "author": {
     "name": "BioJS",
