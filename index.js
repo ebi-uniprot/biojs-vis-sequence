@@ -1,1 +1,1 @@
-module.exports = require("./src/clustal");
+module.exports = require("./lib/index");
