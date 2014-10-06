@@ -50,5 +50,9 @@ mySequence.addHighlight( { "start": 12, "end": 26, "color": "white", "background
 
 //instance=mySequence
 
+mySequence.onAll(function(name,data){
+  console.log(arguments);
+});
 };
+
 
