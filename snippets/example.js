@@ -49,3 +49,5 @@ mySequence.addHighlight( { "start": 7, "end": 21, "color": "white", "background"
 mySequence.addHighlight( { "start": 12, "end": 26, "color": "white", "background": "blue", "id": "ccc" } );
 
 };
+
+//instance=mySequence
