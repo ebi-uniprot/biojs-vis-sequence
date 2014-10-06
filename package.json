@@ -12,9 +12,10 @@
     "email": "biojs-technical@googlegroups.com"
   },
   "dependencies": {
-    "biojs-legacy": "0.0.2",
+    "biojs-events": "0.0.4",
     "jquery": "^2.1.1",
-    "jquery-browser-plugin": "0.0.6"
+    "jquery-browser-plugin": "0.0.6",
+    "js-class": "0.0.2"
   },
   "keywords": [
     "biojs",
@@ -54,7 +55,7 @@
   "sniper": {
     "js": [
       "//code.jquery.com/jquery-1.11.0.min.js",
-	  "/build/sequence.js"
+      "/build/sequence.js"
     ],
     "snippets": [
       "snippets"
