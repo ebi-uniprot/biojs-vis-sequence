@@ -54,7 +54,7 @@
   },
   "sniper": {
     "js": [
-      "//code.jquery.com/jquery-1.11.0.min.js",
+      "http://code.jquery.com/jquery-1.11.0.min.js",
       "/build/sequence.js"
     ],
     "snippets": [
