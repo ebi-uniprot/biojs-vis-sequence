@@ -1,7 +1,7 @@
 {
   "name": "biojs-vis-sequence",
   "description": "Display sequence",
-  "version": "0.1.4",
+  "version": "0.1.4-2",
   "homepage": "http://github.com/ljgarcia/biojs-vis-sequence",
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
     "biojs-events": "0.0.4",
     "jquery": "^2.1.1",
     "jquery-browser-plugin": "0.0.6",
-    "js-class": "0.0.2"
+    "js-class": "0.0.2",
+    "biojs-io-fasta": "^0.0.13"
   },
   "keywords": [
     "biojs",
@@ -31,7 +32,6 @@
     "watch": "gulp watch"
   },
   "devDependencies": {
-    "biojs-io-fasta": "0.0.13",
     "biojs-sniper": "0.0.4",
     "blanket": "^1.1.6",
     "browserify": "^5.12.1",
@@ -64,6 +64,9 @@
     ],
     "first": "example",
     "exposed": ["biojs-io-fasta"]
+  },
+  "galaxy": {
+    "datatypes": ["sequence.Fasta", "sequences"]
   },
   "license": "Apache 2"
 }
