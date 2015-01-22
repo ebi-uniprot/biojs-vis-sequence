@@ -1,7 +1,7 @@
 {
   "name": "biojs-vis-sequence",
   "description": "Display sequence",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "http://github.com/ljgarcia/biojs-vis-sequence",
   "repository": {
     "type": "git",
