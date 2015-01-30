@@ -11,4 +11,4 @@ var mySequence = new Seq({
   },
 });
 
-//instance=mySequence
+//@biojs-instance=mySequence

@@ -48,11 +48,9 @@ mySequence.addHighlight( { "start": 1, "end": 15, "color": "white", "background"
 mySequence.addHighlight( { "start": 7, "end": 21, "color": "white", "background": "green", "id": "bbb" } );
 mySequence.addHighlight( { "start": 12, "end": 26, "color": "white", "background": "blue", "id": "ccc" } );
 
-//instance=mySequence
+//@biojs-instance=mySequence
 
 mySequence.onAll(function(name,data){
   console.log(arguments);
 });
 };
-
-
