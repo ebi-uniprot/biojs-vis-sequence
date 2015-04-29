@@ -442,3 +442,112 @@ The id of the highlight on the internal array. This value is returned by method 
 - unHighlightAll
 
 Clear the highlights of whole sequence. 
+
+### Events ###
+- onAnnotationClicked
+
+-- Parameters:
+
+{function} actionPerformed
+
+An function which receives an Biojs.Event object as argument.
+
+Returned data in the Biojs.Event object:
+
+{Object} source
+
+The component which did triggered the event.
+
+{string} type
+
+The name of the event.
+
+{string} name
+
+The name of the selected annotation.
+
+{int} pos
+
+A number indicating the position of the selected amino acid.
+
+
+-- Example :
+```	
+mySequence.onAnnotationClicked(
+   function( objEvent ) {
+      alert("Clicked " + objEvent.name + " on position " + objEvent.pos );
+   }
+);
+```
+
+- onSelectionChange
+
+--Parameters:
+
+{function} actionPerformed
+
+An function which receives an Biojs.Event object as argument.
+
+Returned data in the Biojs.Event object:
+
+{Object} source
+
+The component which did triggered the event.
+
+{string} type
+
+The name of the event.
+
+{int} start
+
+A number indicating the start of the selection.
+
+{int} end
+
+A number indicating the ending of selection.
+
+
+-- Example :
+```	
+mySequence.onSelectionChange(
+   function( objEvent ) {
+      alert("Selection in progress: " + objEvent.start + ", " + objEvent.end );
+   }
+);
+```
+
+- onSelectionChanged
+
+-- Parameters:
+
+{function} actionPerformed
+
+An function which receives an Biojs.Event object as argument.
+
+Returned data in the Biojs.Event object:
+
+{Object} source
+
+The component which did triggered the event.
+
+{string} type
+
+The name of the event.
+
+{int} start
+
+A number indicating the start of the selection.
+
+{int} end
+
+A number indicating the ending of selection.
+
+
+Example :
+```	
+mySequence.onSelectionChanged(
+   function( objEvent ) {
+      alert("Selected: " + objEvent.start + ", " + objEvent.end );
+   }
+);
+```
