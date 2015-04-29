@@ -158,3 +158,287 @@ formatOptions : {
     footer:true
 }
 ```
+
+### Methods ###
+- addAnnotation
+
+Annotate a set of intervals provided in the argument.
+
+-- Parameters:
+
+{Object} annotation
+
+The intervals belonging to the same annotation. Syntax: { name: <value>, color: <HTMLColorCode>, html: <HTMLString>, regions: [{ start: <startVal1>, end: <endVal1>}, ..., { start: <startValN>, end: <endValN>}] }
+
+-- Example :
+```	
+// Annotations using regions with different colors.
+mySequence.addAnnotation({
+   name:"UNIPROT",
+   html:"<br> Example of <b>HTML</b>",
+   color:"green",
+   regions: [
+      {start: 540, end: 560},
+      {start: 561, end:580, color: "#FFA010"},
+      {start: 581, end:590, color: "red"},
+      {start: 690, end:710}]
+});
+```
+
+- addHighlight
+
+Highlights a region using the font color defined in {Biojs.Sequence#highlightFontColor} by default is red.
+
+-- Parameters:
+
+{Object} h
+
+The highlight defined as follows:
+
+-- Example :
+```
+// highlight the characters within the position 100 to 150, included.
+
+mySequence.addHighlight( { "start": 100, "end": 150, "color": "white", "background": "red", "id": "aaa" } );
+
+Returns:
+
+    {int} representing the id of the highlight on the internal array. Returns -1 on failure
+```
+
+- clearSequence
+
+Shows the columns indicated by the indexes array.
+
+-- Parameters:
+
+{string} showMessage Optional
+
+Message to be showed.
+
+{string} icon Optional
+
+Icon to be showed a side of the message
+
+-- Example :
+```	
+mySequence.clearSequence("No sequence available", "../biojs/css/images/warning_icon.png");
+```
+
+- formatSelectorVisible
+
+Set the visibility of the drop-down list of formats.
+
+-- Parameters:
+
+{boolean} visible
+
+true: show; false: hide.
+
+
+- hide
+
+Hides the whole component.
+
+
+- hideFormatSelector
+
+This is similar to a {Biojs.Protein3D#formatSelectorVisible} with the 'false' argument.
+
+-- Example :
+```
+// Hides the format selector.
+mySequence.hideFormatSelector();
+```
+
+- highlight
+
+Highlights a region using the font color defined in {Biojs.Protein3D#highlightFontColor} by default is red.
+
+-- Parameters:
+
+{int} start
+
+The starting character of the highlighting.
+
+{int} end
+
+The ending character of the highlighting.
+
+{string} color Optional
+
+HTML color code.
+
+{string} background Optional
+
+HTML color code.
+
+{string} id Optional
+
+Custom identifier.
+
+Returns:
+
+{int} representing the id of the highlight on the internal array. Returns -1 on failure
+
+
+- removeAllAnnotations
+
+Removes all the current annotations.
+
+-- Example :
+```
+mySequence.removeAllAnnotations();
+```
+
+- removeAllHighlights
+
+Remove all the highlights of whole sequence.
+
+-- Example :
+```	
+mySequence.removeAllHighlights();
+```
+
+- removeAnnotation
+
+Removes an annotation by means of its name.
+
+-- Parameters:
+
+{string} name
+
+The name of the annotation to be removed.
+
+-- Example :
+```
+// Remove the UNIPROT annotation.
+mySequence.removeAnnotation('UNIPROT');
+```
+
+- removeHighlight
+
+Remove a highlight.
+
+-- Parameters:
+
+{string} id
+
+The id of the highlight on the internal array. This value is returned by method highlight.
+
+-- Example :
+```	
+// Clear the highlighted characters within the position 100 to 150, included.
+mySequence.removeHighlight("spin1");
+```
+
+- setAnnotation
+
+Annotate a set of intervals provided in the argument.
+
+-- Parameters:
+
+{Object} annotation
+
+The intervals belonging to the same annotation. Syntax: 
+
+{ name: <value>, color: <HTMLColorCode>, html: <HTMLString>, regions: [{ start: <startVal1>, end: <endVal1>}, ..., { start: <startValN>, end: <endValN>}] }
+
+- setFormat
+
+Changes the current displaying format of the sequence.
+
+-- Parameters:
+
+{string} format
+
+The format for the sequence to be displayed.
+
+-- Example :
+```	
+// Set format to 'FASTA'.
+mySequence.setFormat('FASTA');
+```
+
+- setNumCols
+
+Changes the current number of columns in the displayed sequence.
+
+-- Parameters:
+
+{int} numCols
+
+The number of columns.
+
+-- Example :
+```	
+// Set the number of columns to 70.
+mySequence.setNumCols(70);
+```
+
+- setSelection
+
+Set the current selection in the sequence causing the event Biojs.Sequence#onSelectionChanged
+
+-- Parameters:
+
+{int} start
+
+The starting character of the selection.
+
+{int} end
+
+The ending character of the selection
+
+-- Example :
+```	
+// set selection from the position 100 to 150
+mySequence.setSelection(100, 150);
+```
+
+- setSequence
+
+Shows the columns indicated by the indexes array.
+
+-- Parameters:
+
+{string} seq
+
+The sequence strand.
+
+{string} identifier Optional
+
+Sequence identifier.
+
+-- Example :
+```
+mySequence.setSequence("P99999");
+```
+
+- show
+
+Shows the whole component.
+
+- showFormatSelector
+
+This is similar to a {Biojs.Protein3D#formatSelectorVisible} with the 'true' argument.
+
+-- Example :
+```
+// Shows the format selector.
+mySequence.showFormatSelector();
+```
+
+- unHighlight
+
+Clear a highlighted region using.
+
+-- Parameters:
+
+{int} id
+
+The id of the highlight on the internal array. This value is returned by method highlight.
+
+- unHighlightAll
+
+Clear the highlights of whole sequence. 
