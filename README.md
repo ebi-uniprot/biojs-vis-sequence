@@ -433,7 +433,7 @@ mySequence.showFormatSelector();
 
 Clear a highlighted region using.
 
-..- Parameters:
+  - Parameters:
 
 {int} id
 
