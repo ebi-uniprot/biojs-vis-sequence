@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "biojs-events": "0.0.4",
-    "biojs-io-fasta": "^0.0.13",
+    "biojs-io-fasta": "^0.1.12",
     "copy2clipboard": "^1.0.0",
     "jquery": "^2.1.1",
     "jquery-browser-plugin": "0.0.6",
