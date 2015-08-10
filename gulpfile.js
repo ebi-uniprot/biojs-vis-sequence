@@ -2,13 +2,13 @@ var gulp   = require('gulp');
 
 // browser builds
 var browserify = require('browserify');
-var watchify = require('watchify')
+var watchify = require('watchify');
 var uglify = require('gulp-uglify');
 
 // testing
 var mocha = require('gulp-mocha');
 
-var mochaPhantomJS = require('gulp-mocha-phantomjs'); 
+var mochaPhantomJS = require('gulp-mocha-phantomjs');
 
 // code style
 var jshint = require('gulp-jshint');
@@ -110,7 +110,7 @@ gulp.task('build-browser',['init'], function() {
 
 // browserify min
 gulp.task('build-browser-min',['init'], function() {
-  var b = browserify({hasExports: true, standalone: "oo"});
+  var b = browserify({hasExports: true});
   exposeBundles(b);
   return b.bundle()
     .pipe(source(outputFile + ".min.js"))
@@ -118,7 +118,7 @@ gulp.task('build-browser-min',['init'], function() {
     .pipe(streamify(uglify()))
     .pipe(gulp.dest(buildDir));
 });
- 
+
 gulp.task('build-browser-gzip', ['build-browser-min'], function() {
   return gulp.src(outputFileMin)
     .pipe(gzip({append: false, gzipOptions: { level: 9 }}))
@@ -137,10 +137,10 @@ function exposeBundles(b){
   }
 }
 
-// watch task for browserify 
+// watch task for browserify
 // watchify has an internal cache -> subsequent builds are faster
 gulp.task('watch', function() {
-  var util = require('gulp-util')
+  var util = require('gulp-util');
 
   var b = browserify({debug: true,hasExports: true, cache: {}, packageCache: {} });
   b.add('./index.js', {expose: packageConfig.name});

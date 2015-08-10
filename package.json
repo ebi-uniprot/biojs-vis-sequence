@@ -1,7 +1,7 @@
 {
   "name": "biojs-vis-sequence",
-  "description": "Display sequence",
-  "version": "0.1.6",
+  "description": "Display a protein/nucleotide sequence",
+  "version": "0.1.7",
   "homepage": "http://github.com/ljgarcia/biojs-vis-sequence",
   "repository": {
     "type": "git",
@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "biojs-events": "0.0.4",
-    "biojs-io-fasta": "^0.0.13",
     "copy2clipboard": "^1.0.0",
     "jquery": "^2.1.1",
     "jquery-browser-plugin": "0.0.6",
@@ -27,9 +26,11 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "gulp test",
+    "build": "gulp build",
     "build-browser": "gulp build-browser",
     "build-browser-min": "gulp build-browser-gzip",
     "prepublish": "gulp",
+    "sniper": "biojs-sniper .",
     "watch": "gulp watch"
   },
   "devDependencies": {
@@ -63,10 +64,7 @@
     "snippets": [
       "snippets"
     ],
-    "first": "example",
-    "exposed": [
-      "biojs-io-fasta"
-    ]
+    "first": "example"
   },
   "galaxy": {
     "datatypes": [
