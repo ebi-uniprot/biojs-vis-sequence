@@ -1,16 +1,28 @@
 {
   "name": "biojs-vis-sequence",
   "description": "Display a protein/nucleotide sequence",
-  "version": "0.1.7",
-  "homepage": "http://github.com/ljgarcia/biojs-vis-sequence",
+  "version": "0.1.8",
+  "homepage": "http://github.com/ebi-uniprot/biojs-vis-sequence",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ljgarcia/biojs-vis-sequence"
+    "url": "git://github.com/ebi-uniprot/biojs-vis-sequence"
   },
   "author": {
     "name": "BioJS",
     "email": "biojs-technical@googlegroups.com"
   },
+  "contributors": [
+    {
+      "name": "John Gomez Carvajal"
+    },
+    {
+      "name": "Leyla Jael Garcia Castro",
+      "email": "ljgarcia@ebi.ac.uk"
+    },
+    {
+      "name": "Sebastian Wilzbach"
+    }
+  ],
   "dependencies": {
     "biojs-events": "0.0.4",
     "biojs-io-fasta": "^0.1.12",
